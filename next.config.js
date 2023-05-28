@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const nextConfig = require('@next/bundle-analyzer')({
+	enabled: process.env.ANALYZE === 'true',
+});
 
-module.exports = nextConfig
+module.exports = nextConfig({
+	reactStrictMode: true,
+	images: {
+		domains: ['pbs.twimg.com'],
+	},
+});
