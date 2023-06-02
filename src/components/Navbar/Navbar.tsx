@@ -12,10 +12,6 @@ const links = [
 		href: '/',
 		name: 'Home',
 	},
-	{
-		href: '/about',
-		name: 'About',
-	},
 ];
 
 const Navbar = () => {
@@ -26,20 +22,21 @@ const Navbar = () => {
 	return (
 		<nav
 			className={classNames(
-				'bg-white/95 z-40 h-20 flex items-center fixed backdrop-blur px-6 dark:bg-slate-900/75  w-full border-b border-b-gray-200 dark:border-b-slate-300/10'
+				'bg-white/95 z-40 h-20 flex items-center fixed backdrop-blur px-6 dark:bg-slate-900/75  w-full border-b border-b-gray-200 dark:border-b-slate-300/10',
+				isSticky ? 'shadow-lg' : ''
 			)}
 		>
-			<div className={classNames('w-full transition h-20 flex', isSticky ? 'shadow-lg' : '')}>
+			<div className="flex w-full h-20 transition">
 				<div className="align-items text-black dark:text-white container mx-auto max-w-[1111px] flex justify-between items-center">
 					<Link href="/">
 						<a className="text-xl font-semibold">JMALKOVIC.</a>
 					</Link>
 
-					<div className="">
-						<div className="items-center hidden gap-4 font-medium text-md sm:flex">
+					<div>
+						<div className="items-center hidden gap-4 text-md sm:flex">
 							{links.map(({ href, name }, idx) => (
 								<Link key={idx} href={href}>
-									<a className="font-semibold text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-slate-100">
+									<a className="text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-slate-100">
 										{name}
 									</a>
 								</Link>

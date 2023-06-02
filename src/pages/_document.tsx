@@ -10,7 +10,6 @@ class MyDocument extends Document {
 		return (
 			<Html>
 				<Head>
-					<title>Jarrod Malkovic</title>
 					<link
 						href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
 						rel="stylesheet"
