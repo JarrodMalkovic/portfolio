@@ -1,10 +1,11 @@
 import * as React from 'react';
 
 /**
- * 
- * @param children 
- * @param fn 
- * @returns 
+ * Recursively applies a mapping function to each React element in an array of children, including nested children.
+ *
+ * @param {React.ReactElement[]} children - An array of React elements to be mapped.
+ * @param {function} fn - The mapping function to be applied to each React element.
+ * @returns {React.ReactElement[]} - An array of React elements with the mapping function applied recursively.
  */
 const recursiveMap = (
 	children: React.ReactElement[],
