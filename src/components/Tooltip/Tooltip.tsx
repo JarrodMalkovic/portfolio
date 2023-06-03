@@ -14,9 +14,7 @@ const Tooltip = ({ children, label, placement = 'top', showArrow = true }: IProp
 
 	return (
 		<div>
-			<button type="button" ref={setTriggerRef}>
-				{children}
-			</button>
+			<div ref={setTriggerRef}>{children}</div>
 			{visible && (
 				<div
 					ref={setTooltipRef}

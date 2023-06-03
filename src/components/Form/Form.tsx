@@ -2,7 +2,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as React from 'react';
 import { useForm } from 'react-hook-form';
 
-import { recursiveMap } from '@/utils/recusriveMap';
+import { recursiveMap } from '@/utils/recursiveMap';
 
 interface FormProps {
 	children: React.ReactNode;
