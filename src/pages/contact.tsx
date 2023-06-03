@@ -10,6 +10,7 @@ import Alert from '@/components/Alert';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { WEB3_FORMS_ACCESS_KEY, WEB3_FORMS_ENDPOINT } from '@/constants/web3Forms';
+import useTitle from '@/hooks/useTitle';
 
 type ContactFormData = {
 	name: string;
@@ -29,6 +30,8 @@ const schema = yup
 	.required();
 
 const Contact: NextPage = () => {
+	useTitle('Jarrod Malkovic | Contact');
+
 	const {
 		handleSubmit,
 		register,

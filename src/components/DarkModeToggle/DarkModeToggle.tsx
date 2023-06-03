@@ -1,21 +1,25 @@
-import useDarkMode from '@/hooks/useDarkMode';
 import { BsFillMoonStarsFill, BsSunFill } from 'react-icons/bs';
 import Tooltip from '@/components/Tooltip';
+import { useTheme } from 'next-themes';
 
 const DarkModeToggle = () => {
-	const [isDark, setIsDark] = useDarkMode();
+	const { theme, setTheme } = useTheme();
+
+	if (!theme) {
+		return null;
+	}
 
 	return (
 		<Tooltip
-			label={isDark ? 'Disable Dark Mode' : 'Enable Dark Mode'}
+			label={theme === 'dark' ? 'Disable Dark Mode' : 'Enable Dark Mode'}
 			placement="bottom"
 			showArrow={false}
 		>
 			<button
-				onClick={() => setIsDark(!isDark)}
+				onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
 				className="inline-flex items-center p-2 border border-transparent rounded hover:bg-gray-100 hover:dark:bg-slate-800"
 			>
-				{isDark ? <BsSunFill /> : <BsFillMoonStarsFill />}
+				{theme === 'dark' ? <BsSunFill /> : <BsFillMoonStarsFill />}
 			</button>
 		</Tooltip>
 	);

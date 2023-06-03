@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
 import '../styles/globals.css';
+import { ThemeProvider } from 'next-themes';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
@@ -8,7 +9,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 			<Head>
 				<title>Jarrod Malkovic</title>
 			</Head>
-			<Component {...pageProps} />
+			<ThemeProvider attribute="class">
+				<Component {...pageProps} />
+			</ThemeProvider>
 		</>
 	);
 }

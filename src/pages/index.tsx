@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import { WorkHistory } from '@/features/work/components/WorkHistory';
 import Pill from '@/components/Pill';
 import Portfolio from '@/features/projects/components/Portfolio';
+import useTitle from '@/hooks/useTitle';
 
 const skills = [
 	'TypeScript',
@@ -40,6 +41,8 @@ const items = [
 ];
 
 const HomePage: NextPage = () => {
+	useTitle('Jarrod Malkovic | Home');
+
 	return (
 		<>
 			<Navbar />
