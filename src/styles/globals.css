@@ -12,7 +12,3 @@
   * This injects Tailwind's utility classes and any utility classes registered by plugins.
   */
 @tailwind utilities;
-
-body {
-	@apply transition-all duration-200 bg-white dark:bg-slate-900;
-}

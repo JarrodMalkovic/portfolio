@@ -1,4 +1,5 @@
 import { BsFillMoonStarsFill, BsSunFill } from 'react-icons/bs';
+import { BiLoaderCircle } from 'react-icons/bi';
 import Tooltip from '@/components/Tooltip';
 import { useTheme } from 'next-themes';
 
@@ -6,7 +7,7 @@ const DarkModeToggle = () => {
 	const { theme, setTheme } = useTheme();
 
 	if (!theme) {
-		return null;
+		return <BiLoaderCircle />;
 	}
 
 	return (

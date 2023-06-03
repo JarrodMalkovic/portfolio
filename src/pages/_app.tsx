@@ -10,7 +10,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<title>Jarrod Malkovic</title>
 			</Head>
 			<ThemeProvider attribute="class">
-				<Component {...pageProps} />
+				<div className="min-h-screen transition-all duration-200 bg-white dark:bg-slate-900">
+					<Component {...pageProps} />
+				</div>
 			</ThemeProvider>
 		</>
 	);
