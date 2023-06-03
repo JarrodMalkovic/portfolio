@@ -12,6 +12,10 @@ const links = [
 		href: '/',
 		name: 'Home',
 	},
+	{
+		href: '/contact',
+		name: 'Contact',
+	},
 ];
 
 const Navbar = () => {

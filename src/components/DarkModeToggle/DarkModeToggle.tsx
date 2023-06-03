@@ -1,6 +1,6 @@
-import useDarkMode from '../../hooks/useDarkMode';
+import useDarkMode from '@/hooks/useDarkMode';
 import { BsFillMoonStarsFill, BsSunFill } from 'react-icons/bs';
-import Tooltip from '../Tooltip';
+import Tooltip from '@/components/Tooltip';
 
 const DarkModeToggle = () => {
 	const [isDark, setIsDark] = useDarkMode();
