@@ -1,6 +1,6 @@
-import * as React from 'react';
 import axios, { AxiosError } from 'axios';
 import { AxiosResponse } from 'axios';
+import * as React from 'react';
 
 type Callbacks = {
 	onSuccess?: () => void;

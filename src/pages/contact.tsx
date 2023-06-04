@@ -1,16 +1,16 @@
-import type { NextPage } from 'next';
+import Alert from '@/components/Alert';
 import Container from '@/components/Container';
+import InputField from '@/components/InputField';
 import Navbar from '@/components/Navbar';
 import PageHeading from '@/components/PageHeading';
-import InputField from '@/components/InputField';
-import * as yup from 'yup';
-import * as React from 'react';
-import { useMutation } from '@/hooks/useMutation';
-import Alert from '@/components/Alert';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
 import { WEB3_FORMS_ACCESS_KEY, WEB3_FORMS_ENDPOINT } from '@/constants/web3Forms';
+import { useMutation } from '@/hooks/useMutation';
 import useTitle from '@/hooks/useTitle';
+import { yupResolver } from '@hookform/resolvers/yup';
+import type { NextPage } from 'next';
+import * as React from 'react';
+import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
 
 type ContactFormData = {
 	name: string;

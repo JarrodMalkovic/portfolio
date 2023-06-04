@@ -1,5 +1,5 @@
+import { CheckCircleIcon, ExclamationCircleIcon } from '@heroicons/react/solid';
 import * as React from 'react';
-import { ExclamationCircleIcon, CheckCircleIcon } from '@heroicons/react/solid';
 
 type AlertStatus = 'success' | 'error';
 

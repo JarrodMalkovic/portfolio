@@ -1,7 +1,7 @@
+import { HomePageContentQuery } from 'graphql/generated';
 import * as React from 'react';
 
 import PortfolioDisplayItem from './PortfolioItem';
-import { HomePageContentQuery } from 'graphql/generated';
 
 type PortfolioProps = {
 	portfolioItems: HomePageContentQuery['projects'];

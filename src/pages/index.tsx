@@ -1,15 +1,16 @@
-import type { NextPage } from 'next';
+import Container from '@/components/Container';
 import Navbar from '@/components/Navbar';
-import { WorkHistory } from '@/features/work/components/WorkHistory';
+import PageHeading from '@/components/PageHeading';
 import Pill from '@/components/Pill';
+import { GRAPHCMS_API_ENDPOINT } from '@/constants/graphCms';
 import Portfolio from '@/features/projects/components/Portfolio';
+import { WorkHistory } from '@/features/work/components/WorkHistory';
 import useTitle from '@/hooks/useTitle';
 import request from 'graphql-request';
-import { GRAPHCMS_API_ENDPOINT } from '@/constants/graphCms';
-import HOME_PAGE_QUERY from '../queries/home.graphql';
 import { HomePageContentQuery } from 'graphql/generated';
-import Container from '@/components/Container';
-import PageHeading from '@/components/PageHeading';
+import type { NextPage } from 'next';
+
+import HOME_PAGE_QUERY from '../queries/home.graphql';
 
 type HomePageProps = {
 	content: HomePageContentQuery;

@@ -1,6 +1,5 @@
-import * as React from 'react';
-
 import Input from '@/components/Input';
+import * as React from 'react';
 import { UseFormRegister } from 'react-hook-form';
 
 interface IProps {

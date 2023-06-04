@@ -1,5 +1,5 @@
-import Tooltip from '@/components/Tooltip';
 import { ExternalLinkIcon, GithubIcon } from '@/components/Icons/Icon';
+import Tooltip from '@/components/Tooltip';
 import { HomePageContentQuery } from 'graphql/generated';
 
 type PortfolioDisplayItemProps = {

@@ -1,11 +1,11 @@
-import * as React from 'react';
-import { Dialog, Switch } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/solid';
+import DarkModeToggle from '@/components/DarkModeToggle';
 import useStickyNavbar from '@/hooks/useStickyNavbar';
 import { classNames } from '@/utils/classNames';
-import DarkModeToggle from '@/components/DarkModeToggle';
-import Link from 'next/link';
+import { Dialog, Switch } from '@headlessui/react';
+import { MenuIcon, XIcon } from '@heroicons/react/solid';
 import { useTheme } from 'next-themes';
+import Link from 'next/link';
+import * as React from 'react';
 
 const links = [
 	{

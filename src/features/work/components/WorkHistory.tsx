@@ -1,4 +1,5 @@
 import { HomePageContentQuery } from 'graphql/generated';
+
 import { WorkHistoryItem } from './WorkHistoryItem';
 
 const workHistoryItems = [

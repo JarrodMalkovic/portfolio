@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import { HomePageContentQuery } from 'graphql/generated';
+import Image from 'next/image';
 
 type WorkHistoryItemProps = {
 	workHistoryItem: HomePageContentQuery['works'][number];

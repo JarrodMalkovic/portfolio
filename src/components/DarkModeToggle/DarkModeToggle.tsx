@@ -1,6 +1,6 @@
-import { BsFillMoonStarsFill, BsSunFill, BsFillCircleFill } from 'react-icons/bs';
 import Tooltip from '@/components/Tooltip';
 import { useTheme } from 'next-themes';
+import { BsFillCircleFill, BsFillMoonStarsFill, BsSunFill } from 'react-icons/bs';
 
 const DarkModeToggle = () => {
 	const { theme, setTheme } = useTheme();
