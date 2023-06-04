@@ -4,12 +4,16 @@
 	"private": true,
 	"scripts": {
 		"dev": "cross-env NODE_ENV=development next dev",
-		"build": "cross-env NODE_ENV=production next build",
+		"build": "graphql-codegen && cross-env NODE_ENV=production next build",
 		"start": "cross-env NODE_ENV=production next start",
+		"codegen": "graphql-codegen",
 		"lint": "next lint",
 		"test": "jest"
 	},
 	"dependencies": {
+		"@graphql-codegen/cli": "^4.0.1",
+		"@graphql-codegen/typescript": "^4.0.0",
+		"@graphql-codegen/typescript-operations": "^4.0.0",
 		"@headlessui/react": "^1.5.0",
 		"@heroicons/react": "v1",
 		"@hookform/resolvers": "^3.1.0",
@@ -17,7 +21,9 @@
 		"@vercel/analytics": "^1.0.1",
 		"axios": "^1.4.0",
 		"cross-env": "^7.0.3",
+		"graphql": "^16.6.0",
 		"graphql-request": "^6.1.0",
+		"graphql-tag": "^2.12.6",
 		"jest": "^27.5.1",
 		"next": "12.1.0",
 		"next-themes": "^0.2.1",

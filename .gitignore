@@ -40,3 +40,6 @@ yarn-error.log*
 
 # Sentry Auth Token
 .sentryclirc
+
+# graphql
+graphql

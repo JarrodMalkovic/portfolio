@@ -1,0 +1,23 @@
+query HomePageContent {
+	projects {
+		title
+		description
+
+		skills {
+			name
+		}
+	}
+
+	skills {
+		name
+	}
+
+	works(orderBy: order_ASC) {
+		description
+		title
+
+		logo {
+			url
+		}
+	}
+}

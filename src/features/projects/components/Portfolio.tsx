@@ -1,11 +1,10 @@
 import * as React from 'react';
 
-import { classNames } from '@/utils/classNames';
 import PortfolioDisplayItem from './PortfolioItem';
-import { PortfolioItem } from '../models/portfolio';
+import { HomePageContentQuery } from 'graphql/generated';
 
 type PortfolioProps = {
-	portfolioItems: PortfolioItem[];
+	portfolioItems: HomePageContentQuery['projects'];
 };
 
 const Portfolio: React.FC<PortfolioProps> = ({ portfolioItems }) => {

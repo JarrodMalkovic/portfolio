@@ -6,7 +6,18 @@ const nextConfig = require('@next/bundle-analyzer')({
 module.exports = nextConfig({
 	reactStrictMode: true,
 	images: {
-		domains: ['pbs.twimg.com'],
+		domains: ['media.graphassets.com'],
+	},
+	webpack: (config) => {
+		config.module.rules.push({
+			test: /\.(graphql|gql)$/,
+			exclude: /node_modules/,
+			loader: 'graphql-tag/loader',
+		});
+		return config;
+	},
+	webpackDevMiddleware: (config) => {
+		return config;
 	},
 });
 

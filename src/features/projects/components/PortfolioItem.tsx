@@ -1,9 +1,9 @@
 import Tooltip from '@/components/Tooltip';
-import { PortfolioItem } from '../models/portfolio';
 import { ExternalLinkIcon, GithubIcon } from '@/components/Icons/Icon';
+import { HomePageContentQuery } from 'graphql/generated';
 
 type PortfolioDisplayItemProps = {
-	portfolioItem: PortfolioItem;
+	portfolioItem: HomePageContentQuery['projects'][number];
 };
 
 const PortfolioDisplayItem: React.FC<PortfolioDisplayItemProps> = ({ portfolioItem }) => {
@@ -11,13 +11,13 @@ const PortfolioDisplayItem: React.FC<PortfolioDisplayItemProps> = ({ portfolioIt
 		<div className="lg:w-[calc(100%/3)] md:w-[50%] w-[100%]  px-3 py-3">
 			<div className="shadow-[0px_6px_15px_0px_rgba(100,100,111,0.35)] dark:shadow-xl hover:-translate-y-2 duration-[250ms] dark:bg-[#131c33] top-0 rounded-lg p-8">
 				<div className="flex flex-col items-center space-y-4 text-center dark:text-slate-300">
-					<h2 className="text-2xl font-medium dark:text-white">{portfolioItem.name}</h2>
+					<h2 className="text-2xl font-medium dark:text-white">{portfolioItem.title}</h2>
 					<p className="text-sm font-normal leading-6 tracking-wide">{portfolioItem.description}</p>
 					{portfolioItem.skills && portfolioItem.skills.length > 0 && (
 						<ul className={'flex justify-center flex-wrap gap-4'}>
-							{portfolioItem.skills.map((skill: string, idx: number) => (
+							{portfolioItem.skills.map((skill, idx) => (
 								<li className={'font-medium text-[12.8px]'} key={idx}>
-									{skill}
+									{skill.name}
 								</li>
 							))}
 						</ul>
