@@ -55,7 +55,7 @@ const Contact: NextPage = () => {
 	return (
 		<>
 			<Navbar />
-			<PageHeading>Placeholder</PageHeading>
+			<PageHeading>Placeholder.</PageHeading>
 			<Container>
 				<div className="space-y-8 sm:space-y-10">
 					<div className="space-y-4">
