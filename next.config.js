@@ -9,3 +9,21 @@ module.exports = nextConfig({
 		domains: ['pbs.twimg.com'],
 	},
 });
+
+const { withSentryConfig } = require('@sentry/nextjs');
+
+module.exports = withSentryConfig(
+	module.exports,
+	{
+		silent: true,
+		org: 'jarrod-malkovic',
+		project: 'portfolio',
+	},
+	{
+		widenClientFileUpload: true,
+		transpileClientSDK: true,
+		tunnelRoute: '/monitoring',
+		hideSourceMaps: true,
+		disableLogger: true,
+	}
+);
