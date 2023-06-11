@@ -1,16 +1,23 @@
 import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
+import { Poppins } from 'next/font/google';
 
 import '../styles/globals.css';
+
+const poppins = Poppins({
+	weight: ['300', '400', '500', '600'],
+	subsets: ['latin'],
+	display: 'swap',
+});
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<ThemeProvider attribute="class">
-				<div className="min-h-screen transition-all duration-200 bg-white dark:bg-slate-900">
+				<main className={poppins.className}>
 					<Component {...pageProps} />
-				</div>
+				</main>
 			</ThemeProvider>
 			<Analytics />
 		</>

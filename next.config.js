@@ -16,9 +16,6 @@ module.exports = nextConfig({
 		});
 		return config;
 	},
-	webpackDevMiddleware: (config) => {
-		return config;
-	},
 });
 
 const { withSentryConfig } = require('@sentry/nextjs');

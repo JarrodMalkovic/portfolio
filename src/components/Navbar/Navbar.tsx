@@ -1,12 +1,14 @@
 import DarkModeToggle from '@/components/DarkModeToggle';
 import useStickyNavbar from '@/hooks/useStickyNavbar';
 import { classNames } from '@/utils/classNames';
-import { Dialog, Switch } from '@headlessui/react';
+import { Switch } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/solid';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import * as React from 'react';
+
+import Dialog from '../Dialog';
 
 const links = [
 	{
@@ -21,7 +23,7 @@ const links = [
 
 const Navbar = () => {
 	const isSticky = useStickyNavbar();
-	const [isOpen, setIsOpen] = React.useState(false);
+	const [isOpen, setIsOpen] = React.useState(true);
 	const { theme, setTheme } = useTheme();
 	const router = useRouter();
 
@@ -34,24 +36,25 @@ const Navbar = () => {
 		>
 			<div className="flex w-full h-20 transition">
 				<div className="align-items text-black dark:text-white container mx-auto max-w-[1111px] flex justify-between items-center">
-					<Link href="/">
-						<a className="text-xl font-semibold">JMALKOVIC.</a>
+					<Link href="/" className="text-xl font-semibold" aria-label="Go to home page">
+						JMALKOVIC.
 					</Link>
 
 					<div>
 						<div className="items-center hidden gap-1 text-md sm:flex">
 							{links.map(({ href, name }, idx) => (
-								<Link key={idx} href={href}>
-									<a
-										aria-current={router.pathname === href ? 'page' : undefined}
-										className={classNames(
-											'text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-slate-100 py-1 px-3 rounded-lg',
-											router.pathname === href &&
-												'bg-gray-100 dark:bg-slate-800 text-black dark:text-white'
-										)}
-									>
-										{name}
-									</a>
+								<Link
+									key={idx}
+									href={href}
+									aria-current={router.pathname === href ? 'page' : undefined}
+									className={classNames(
+										'text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-slate-100 py-1 px-3 rounded-lg',
+										router.pathname === href &&
+											'bg-gray-100 dark:bg-slate-800 text-black dark:text-white'
+									)}
+									aria-label={`Go to ${name} page`}
+								>
+									{name}
 								</Link>
 							))}
 							<DarkModeToggle />
@@ -66,8 +69,6 @@ const Navbar = () => {
 								className="fixed inset-0 z-50 overflow-y-auto sm:hidden"
 							>
 								<div className="flex items-center justify-center min-h-screen">
-									<Dialog.Overlay className="fixed inset-0 bg-black opacity-30" />
-
 									<div className="fixed w-56 bg-white rounded-md top-4 right-4 dark:bg-slate-700">
 										<button
 											onClick={() => setIsOpen(false)}
@@ -80,13 +81,14 @@ const Navbar = () => {
 											<div className="py-1">
 												{links.map(({ href, name }, idx) => (
 													<div key={idx} className="px-4 py-2">
-														<a
+														<Link
 															href={href}
 															onClick={() => setIsOpen(false)}
-															className="font-semibold dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100"
+															className=" dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100"
+															aria-label={`Go to ${name} page`}
 														>
 															{name}
-														</a>
+														</Link>
 													</div>
 												))}
 											</div>
