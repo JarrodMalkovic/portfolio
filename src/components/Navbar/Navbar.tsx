@@ -23,7 +23,7 @@ const links = [
 
 const Navbar = () => {
 	const isSticky = useStickyNavbar();
-	const [isOpen, setIsOpen] = React.useState(true);
+	const [isOpen, setIsOpen] = React.useState(false);
 	const { theme, setTheme } = useTheme();
 	const router = useRouter();
 
@@ -73,6 +73,7 @@ const Navbar = () => {
 										<button
 											onClick={() => setIsOpen(false)}
 											className="absolute flex items-center top-4 right-4 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100"
+											aria-label="Close menu"
 										>
 											<XIcon className="w-5 h-5" />
 										</button>

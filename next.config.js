@@ -5,6 +5,10 @@ const nextConfig = require('@next/bundle-analyzer')({
 
 module.exports = nextConfig({
 	reactStrictMode: true,
+	i18n: {
+		locales: ['en'],
+		defaultLocale: 'en',
+	},
 	images: {
 		domains: ['media.graphassets.com'],
 	},

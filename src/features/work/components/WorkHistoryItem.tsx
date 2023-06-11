@@ -19,10 +19,10 @@ const WorkHistoryItem: React.FC<WorkHistoryItemProps> = ({ workHistoryItem }) =>
 			</div>
 			<div className="space-y-2">
 				<div>
-					<h4 className="font-medium dark:text-white">{workHistoryItem.title}</h4>
-					<h5 className="font-normal text-gray-600 dark:text-slate-400 text-md">
+					<p className="font-medium dark:text-white">{workHistoryItem.title}</p>
+					<p className="font-normal text-gray-600 dark:text-slate-400 text-md">
 						{workHistoryItem.description}
-					</h5>
+					</p>
 				</div>
 			</div>
 		</div>

@@ -25,14 +25,24 @@ const PortfolioDisplayItem: React.FC<PortfolioDisplayItemProps> = ({ portfolioIt
 				<div className="flex justify-center gap-4">
 					{portfolioItem.githubLink && (
 						<Tooltip label="View code">
-							<a href={portfolioItem.githubLink} target="_blank" rel="noreferrer">
+							<a
+								href={portfolioItem.githubLink}
+								target="_blank"
+								rel="noreferrer"
+								aria-label="Open project on github"
+							>
 								<GithubIcon />
 							</a>
 						</Tooltip>
 					)}
 					{portfolioItem.websiteLink && (
 						<Tooltip label="View demo">
-							<a href={portfolioItem.websiteLink} target="_blank" rel="noreferrer">
+							<a
+								href={portfolioItem.websiteLink}
+								target="_blank"
+								rel="noreferrer"
+								aria-label="Open project website"
+							>
 								<ExternalLinkIcon />
 							</a>
 						</Tooltip>

@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import PageHeading from '@/components/PageHeading';
 import { WEB3_FORMS_ACCESS_KEY, WEB3_FORMS_ENDPOINT } from '@/constants/web3Forms';
 import { useMutation } from '@/hooks/useMutation';
-import useTitle from '@/hooks/useTitle';
+import useSeo from '@/hooks/useSeo';
 import { yupResolver } from '@hookform/resolvers/yup';
 import type { NextPage } from 'next';
 import * as React from 'react';
@@ -30,7 +30,7 @@ const schema = yup
 	.required();
 
 const Contact: NextPage = () => {
-	useTitle('Jarrod Malkovic | Contact');
+	useSeo({ title: 'Jarrod Malkovic | Contact' });
 
 	const {
 		handleSubmit,
@@ -92,6 +92,7 @@ const Contact: NextPage = () => {
 							<button
 								className="p-2.5 mt-2 float-right text-white bg-black hover:bg-gray-900 dark:bg-slate-600 dark:hover:bg-slate-500 rounded-md md:w-48  w-full"
 								type="submit"
+								aria-label="Send message"
 							>
 								{isLoading ? 'Sending...' : 'Send message'}
 							</button>
