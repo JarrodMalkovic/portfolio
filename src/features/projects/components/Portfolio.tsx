@@ -9,12 +9,10 @@ type PortfolioProps = {
 
 const Portfolio: React.FC<PortfolioProps> = ({ portfolioItems }) => {
 	return (
-		<div className="container max-w-6xl">
-			<div className="flex flex-wrap -ml-3 -mr-3">
-				{portfolioItems.map((portfolioItem, idx) => (
-					<PortfolioDisplayItem key={idx} portfolioItem={portfolioItem} />
-				))}
-			</div>
+		<div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+			{portfolioItems.map((portfolioItem, idx) => (
+				<PortfolioDisplayItem key={idx} portfolioItem={portfolioItem} />
+			))}
 		</div>
 	);
 };

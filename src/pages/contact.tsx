@@ -24,7 +24,7 @@ const schema = yup
 	.object({
 		name: yup.string().required('This field is required'),
 		email: yup.string().email('Must be a valid email').required('This field is required'),
-		subject: yup.string().required('This field is required'),
+		subject: yup.string(),
 		message: yup.string().required('This field is required'),
 	})
 	.required();
@@ -57,44 +57,46 @@ const Contact: NextPage = () => {
 			<Navbar />
 			<PageHeading>Placeholder.</PageHeading>
 			<Container>
-				<div className="space-y-8 sm:space-y-10">
-					<div className="space-y-4">
+				<div className="mb-10 space-y-4 md:space-y-10">
+					<div className="space-y-2 md:space-y-4">
 						<h2 className="text-2xl font-semibold dark:text-white">Placeholder</h2>
 						<p className="font-normal leading-6 tracking-wide text-md dark:text-slate-300">
-							Placeholder
+							Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder
+							Placeholder Placeholder Placeholder Placeholder Placeholder
 						</p>
 					</div>
 
-					<div>
-						<form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
-							{isSuccess && <Alert message="Placeholder" status="success" />}
-							{isError && <Alert message="Placeholder" status="error" />}
+					<form className="space-y-2 md:space-y-4" onSubmit={handleSubmit(onSubmit)}>
+						{isSuccess && <Alert message="Placeholder" status="success" />}
+						{isError && <Alert message="Placeholder" status="error" />}
 
-							<div className="space-y-4 md:space-y-0 md:grid md:grid-cols-2 md:gap-4">
-								<InputField name="name" label="Name" register={register} error={errors.name} />
-								<InputField name="email" label="Email" register={register} error={errors.email} />
-							</div>
-							<InputField
-								name="subject"
-								label="Subject"
-								register={register}
-								error={errors.subject}
-							/>
-							<InputField
-								name="message"
-								isTextarea
-								label="Message"
-								register={register}
-								error={errors.message}
-							/>
+						<div className="space-y-2 md:space-y-0 md:grid md:grid-cols-2 md:gap-4">
+							<InputField name="name" label="Name" register={register} error={errors.name} />
+							<InputField name="email" label="Email" register={register} error={errors.email} />
+						</div>
+						<InputField
+							className="hidden md:block"
+							name="subject"
+							label="Subject"
+							register={register}
+							error={errors.subject}
+						/>
+						<InputField
+							name="message"
+							isTextarea
+							label="Message"
+							register={register}
+							error={errors.message}
+						/>
+						<div className="mt-10">
 							<button
-								className="p-2.5 float-right text-white bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 rounded-md"
+								className="p-2.5 mt-2 float-right text-white bg-black hover:bg-gray-900 dark:bg-slate-600 dark:hover:bg-slate-500 rounded-md md:w-48  w-full"
 								type="submit"
 							>
-								{isLoading ? 'Sending...' : 'Send'}
+								{isLoading ? 'Sending...' : 'Send message'}
 							</button>
-						</form>
-					</div>
+						</div>
+					</form>
 				</div>
 			</Container>
 		</>

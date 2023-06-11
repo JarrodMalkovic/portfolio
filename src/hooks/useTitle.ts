@@ -7,8 +7,14 @@ import * as React from 'react';
  */
 const useTitle = (title: string) => {
 	React.useEffect(() => {
-		return () => {
+		const originalTitle = document.title;
+
+		if (document.title !== title) {
 			document.title = title;
+		}
+
+		return () => {
+			document.title = originalTitle;
 		};
 	}, [title]);
 };

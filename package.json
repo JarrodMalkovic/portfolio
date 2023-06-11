@@ -35,6 +35,7 @@
 		"react-tooltip": "^4.2.21",
 		"react-typing-hook": "^1.0.10",
 		"shufflejs": "^6.0.0",
+		"tailwind-merge": "^1.13.1",
 		"ts-jest": "^29.1.0",
 		"yup": "^1.2.0"
 	},

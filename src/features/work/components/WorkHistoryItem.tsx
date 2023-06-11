@@ -8,7 +8,7 @@ type WorkHistoryItemProps = {
 const WorkHistoryItem: React.FC<WorkHistoryItemProps> = ({ workHistoryItem }) => {
 	return (
 		<div className="flex space-x-4">
-			<div>
+			<div className="min-w-[40px] min-h-[40px]">
 				<Image
 					alt=""
 					className="rounded"

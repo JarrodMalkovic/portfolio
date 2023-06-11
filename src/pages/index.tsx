@@ -24,24 +24,28 @@ const HomePage: NextPage<HomePageProps> = ({ content }) => {
 			<Navbar />
 			<PageHeading>About me.</PageHeading>
 			<Container>
-				<div className="space-y-12">
-					<div className="space-y-4">
+				<div className="space-y-4 md:space-y-10">
+					<div className="space-y-2 md:space-y-4">
 						<h2 className="text-2xl font-medium dark:text-white">Hey there!</h2>
-						<p className="font-normal leading-6 tracking-wide dark:text-slate-300">Placeholder</p>
+						<p className="font-normal leading-6 tracking-wide dark:text-slate-300">
+							Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder
+							Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder
+							Placeholder Placeholder
+						</p>
 					</div>
-					<div className="space-y-4">
+					<div className="space-y-2 md:space-y-4">
 						<h2 className="text-2xl font-medium dark:text-white">Work</h2>
 						<WorkHistory workHistoryItems={content.works} />
 					</div>
-					<div className="space-y-4">
+					<div className="space-y-2 md:space-y-4">
 						<h2 className="text-2xl font-medium dark:text-white">Skills</h2>
-						<div className="flex flex-wrap gap-3">
+						<div className="flex flex-wrap gap-2 md:gap-3">
 							{content.skills.map((skill, idx) => (
 								<Pill key={idx}>{skill.name}</Pill>
 							))}
 						</div>
 					</div>
-					<div className="space-y-4">
+					<div className="space-y-2 md:space-y-4">
 						<h2 className="text-2xl font-medium dark:text-white">Selected Projects</h2>
 						<Portfolio portfolioItems={content.projects} />
 					</div>

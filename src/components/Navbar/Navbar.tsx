@@ -5,6 +5,7 @@ import { Dialog, Switch } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/solid';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import * as React from 'react';
 
 const links = [
@@ -22,6 +23,7 @@ const Navbar = () => {
 	const isSticky = useStickyNavbar();
 	const [isOpen, setIsOpen] = React.useState(false);
 	const { theme, setTheme } = useTheme();
+	const router = useRouter();
 
 	return (
 		<nav
@@ -37,10 +39,17 @@ const Navbar = () => {
 					</Link>
 
 					<div>
-						<div className="items-center hidden gap-4 text-md sm:flex">
+						<div className="items-center hidden gap-1 text-md sm:flex">
 							{links.map(({ href, name }, idx) => (
 								<Link key={idx} href={href}>
-									<a className="text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-slate-100">
+									<a
+										aria-current={router.pathname === href ? 'page' : undefined}
+										className={classNames(
+											'text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-slate-100 py-1 px-3 rounded-lg',
+											router.pathname === href &&
+												'bg-gray-100 dark:bg-slate-800 text-black dark:text-white'
+										)}
+									>
 										{name}
 									</a>
 								</Link>

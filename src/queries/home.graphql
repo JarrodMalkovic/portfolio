@@ -2,6 +2,8 @@ query HomePageContent {
 	projects {
 		title
 		description
+		githubLink
+		websiteLink
 
 		skills {
 			name

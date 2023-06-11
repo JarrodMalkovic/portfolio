@@ -8,7 +8,7 @@ type WorkHistoryProps = {
 
 const WorkHistory: React.FC<WorkHistoryProps> = ({ workHistoryItems }) => {
 	return (
-		<div className="space-y-4">
+		<div className="space-y-2 md:space-y-4">
 			{workHistoryItems.map((workHistoryItem, idx) => (
 				<WorkHistoryItem key={idx} workHistoryItem={workHistoryItem}></WorkHistoryItem>
 			))}

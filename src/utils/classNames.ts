@@ -1,3 +1,7 @@
+import { twMerge } from 'tailwind-merge';
+
+import { isString } from './isString';
+
 /**
  * Utility function for generating a string of class names based on the provided arguments.
  *
@@ -5,6 +9,6 @@
  *
  * @returns {string} The concatenated class names string.
  */
-const classNames = (...classes: (string | boolean)[]): string => classes.filter(Boolean).join(' ');
+const classNames = (...classes: (string | boolean)[]): string => twMerge(classes.filter(isString));
 
 export { classNames };

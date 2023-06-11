@@ -1,6 +1,7 @@
 import Input from '@/components/Input';
+import { classNames } from '@/utils/classNames';
 import * as React from 'react';
-import { UseFormRegister } from 'react-hook-form';
+import { FieldError, UseFormRegister } from 'react-hook-form';
 
 interface IProps {
 	label: string;
@@ -9,12 +10,13 @@ interface IProps {
 	htmlFor?: string;
 	type?: React.HTMLInputTypeAttribute;
 	isTextarea?: boolean;
-	error?: any;
+	error?: FieldError;
+	className?: string;
 }
 
-const InputField = ({ label, htmlFor, name, isTextarea = false, ...props }: IProps) => {
+const InputField = ({ label, htmlFor, name, isTextarea = false, className, ...props }: IProps) => {
 	return (
-		<div className="w-full h-full">
+		<div className={classNames('w-full h-full', !!className && className)}>
 			{label && (
 				<label
 					htmlFor={htmlFor}
