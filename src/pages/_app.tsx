@@ -1,3 +1,4 @@
+import { classNames } from '@/utils/classNames';
 import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
@@ -15,7 +16,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<ThemeProvider attribute="class">
-				<main className={poppins.className}>
+				<main
+					className={classNames(
+						'min-h-screen transition-all duration-200 bg-white dark:bg-slate-900',
+						poppins.className
+					)}
+				>
 					<Component {...pageProps} />
 				</main>
 			</ThemeProvider>
