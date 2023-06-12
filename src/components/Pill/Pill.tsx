@@ -1,12 +1,13 @@
 import * as React from 'react';
 
-type PillProps = {
-	children: React.ReactNode;
-};
+interface PillProps extends React.HTMLAttributes<HTMLParagraphElement> {}
 
-const Pill: React.FC<PillProps> = ({ children }) => {
+const Pill: React.FC<PillProps> = ({ children, ...rest }) => {
 	return (
-		<p className="inline-block px-3 py-1 text-sm border border-slate-800 dark:border-slate-200 rounded-2xl text-slate-800 dark:text-slate-200">
+		<p
+			className="inline-block px-3 py-1 text-sm border border-slate-800 dark:border-slate-200 rounded-2xl text-slate-800 dark:text-slate-200"
+			{...rest}
+		>
 			{children}
 		</p>
 	);

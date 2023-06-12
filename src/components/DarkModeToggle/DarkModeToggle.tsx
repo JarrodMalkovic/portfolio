@@ -16,9 +16,9 @@ const DarkModeToggle = () => {
 			showArrow={false}
 		>
 			<button
-				onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
 				className="inline-flex items-center p-2 ml-2 border border-transparent rounded-lg hover:bg-gray-100 hover:dark:bg-slate-800"
-				aria-label={`Enable ${'dark' ? 'light' : 'dark'} mode`}
+				aria-label={theme === 'dark' ? 'Disable Dark Mode' : 'Enable Dark Mode'}
+				onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
 			>
 				{isMounted ? (
 					theme === 'dark' ? (

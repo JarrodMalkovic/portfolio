@@ -1,7 +1,9 @@
 import Container from '@/components/Container';
+import Heading from '@/components/Heading';
 import Navbar from '@/components/Navbar';
 import PageHeading from '@/components/PageHeading';
 import Pill from '@/components/Pill';
+import Text from '@/components/Text';
 import { GRAPHCMS_API_ENDPOINT } from '@/constants/graphCms';
 import Portfolio from '@/features/projects/components/Portfolio';
 import { WorkHistory } from '@/features/work/components/WorkHistory';
@@ -26,19 +28,25 @@ const HomePage: NextPage<HomePageProps> = ({ content }) => {
 			<Container>
 				<div className="space-y-4 md:space-y-10">
 					<div className="space-y-2 md:space-y-4">
-						<h2 className="text-2xl font-medium dark:text-white">Hey there!</h2>
-						<p className="font-normal leading-6 tracking-wide dark:text-slate-300">
+						<Heading headingType="h2" size="2xl" weight="medium">
+							Hey there!
+						</Heading>
+						<Text>
 							Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder
 							Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder
-							Placeholder Placeholder
-						</p>
+							Placeholder Placeholder Test
+						</Text>
 					</div>
 					<div className="space-y-2 md:space-y-4">
-						<h2 className="text-2xl font-medium dark:text-white">Work</h2>
+						<Heading headingType="h2" size="2xl" weight="medium">
+							Work
+						</Heading>
 						<WorkHistory workHistoryItems={content.works} />
 					</div>
 					<div className="space-y-2 md:space-y-4">
-						<h2 className="text-2xl font-medium dark:text-white">Skills</h2>
+						<Heading headingType="h2" size="2xl" weight="medium">
+							Skills
+						</Heading>
 						<div className="flex flex-wrap gap-2 md:gap-3">
 							{content.skills.map((skill, idx) => (
 								<Pill key={idx}>{skill.name}</Pill>
@@ -46,7 +54,9 @@ const HomePage: NextPage<HomePageProps> = ({ content }) => {
 						</div>
 					</div>
 					<div className="space-y-2 md:space-y-4">
-						<h2 className="text-2xl font-medium dark:text-white">Selected Projects</h2>
+						<Heading headingType="h2" size="2xl" weight="medium">
+							Selected Projects
+						</Heading>
 						<Portfolio portfolioItems={content.projects} />
 					</div>
 				</div>

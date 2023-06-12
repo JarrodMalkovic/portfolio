@@ -1,14 +1,18 @@
 import * as React from 'react';
 import { usePopperTooltip } from 'react-popper-tooltip';
 
-interface IProps {
-	children: React.ReactNode;
+interface TooltipProps extends React.HTMLAttributes<HTMLDivElement> {
 	label: string;
 	placement?: any;
 	showArrow?: boolean;
 }
 
-const Tooltip = ({ children, label, placement = 'top', showArrow = true }: IProps) => {
+const Tooltip: React.FC<TooltipProps> = ({
+	children,
+	label,
+	placement = 'top',
+	showArrow = true,
+}) => {
 	const { getArrowProps, getTooltipProps, setTooltipRef, setTriggerRef, visible } =
 		usePopperTooltip({ placement });
 

@@ -1,3 +1,4 @@
+import Text from '@/components/Text/Text';
 import { HomePageContentQuery } from 'graphql/generated';
 import Image from 'next/image';
 
@@ -19,10 +20,8 @@ const WorkHistoryItem: React.FC<WorkHistoryItemProps> = ({ workHistoryItem }) =>
 			</div>
 			<div className="space-y-2">
 				<div>
-					<p className="font-medium dark:text-white">{workHistoryItem.title}</p>
-					<p className="font-normal text-gray-600 dark:text-slate-400 text-md">
-						{workHistoryItem.description}
-					</p>
+					<Text weight="medium">{workHistoryItem.title}</Text>
+					<Text colour="light">{workHistoryItem.description}</Text>
 				</div>
 			</div>
 		</div>

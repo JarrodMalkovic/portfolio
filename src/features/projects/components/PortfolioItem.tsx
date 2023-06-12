@@ -1,5 +1,7 @@
 import Card from '@/components/Card/Card';
+import Heading from '@/components/Heading';
 import { ExternalLinkIcon, GithubIcon } from '@/components/Icons/Icon';
+import Text from '@/components/Text/Text';
 import Tooltip from '@/components/Tooltip';
 import { HomePageContentQuery } from 'graphql/generated';
 
@@ -10,17 +12,19 @@ type PortfolioDisplayItemProps = {
 const PortfolioDisplayItem: React.FC<PortfolioDisplayItemProps> = ({ portfolioItem }) => {
 	return (
 		<Card>
-			<div className="flex flex-col items-center space-y-4 text-center dark:text-slate-300">
-				<h2 className="text-2xl font-medium dark:text-white">{portfolioItem.title}</h2>
-				<p className="text-sm font-normal leading-6 tracking-wide">{portfolioItem.description}</p>
+			<div className="flex flex-col items-center space-y-4 text-center">
+				<Heading headingType="h2" size="2xl" weight="medium">
+					{portfolioItem.title}
+				</Heading>
+				<Text size="sm">{portfolioItem.description}</Text>
 				{portfolioItem.skills && portfolioItem.skills.length > 0 && (
-					<ul className={'flex justify-center flex-wrap gap-4'}>
+					<div className="flex flex-wrap justify-center gap-4">
 						{portfolioItem.skills.map((skill, idx) => (
-							<li className={'font-medium text-[12.8px]'} key={idx}>
+							<Text size="xs" key={idx}>
 								{skill.name}
-							</li>
+							</Text>
 						))}
-					</ul>
+					</div>
 				)}
 				<div className="flex justify-center gap-4">
 					{portfolioItem.githubLink && (

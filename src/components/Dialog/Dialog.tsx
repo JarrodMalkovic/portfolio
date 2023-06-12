@@ -1,12 +1,10 @@
 import { classNames } from '@/utils/classNames';
-import React, { useState } from 'react';
+import React from 'react';
 
-type DialogProps = {
+interface DialogProps extends React.HTMLAttributes<HTMLDivElement> {
 	open: boolean;
-	onClose?: () => void;
-	children: React.ReactNode;
-	className?: string;
-};
+	onClose: () => void;
+}
 
 const Dialog: React.FC<DialogProps> = ({ open, onClose, children, className }) => {
 	const handleClose = React.useCallback(() => {
