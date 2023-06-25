@@ -1,3 +1,4 @@
+import { classNames } from '@/utils/classNames';
 import { VariantProps, cva } from 'class-variance-authority';
 import * as React from 'react';
 
@@ -31,13 +32,14 @@ const Heading: React.FC<HeadingProps> = ({
 	headingType = 'h1',
 	size = 'md',
 	weight = 'normal',
+	className = '',
 	children,
 	...rest
 }) => {
 	const HeadingTag = headingType;
 
 	return (
-		<HeadingTag className={heading({ size, weight })} {...rest}>
+		<HeadingTag className={classNames(heading({ size, weight }), className ?? '')} {...rest}>
 			{children}
 		</HeadingTag>
 	);

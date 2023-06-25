@@ -28,8 +28,8 @@ const HomePage: NextPage<HomePageProps> = ({ content }) => {
 			<Container>
 				<div className="space-y-4 md:space-y-10">
 					<div className="space-y-2 md:space-y-4">
-						<Heading headingType="h2" size="2xl" weight="medium">
-							Hey there!
+						<Heading headingType="h2" size="3xl" weight="medium" className="flex">
+							Hey there <span className="ml-2 animate-waving-hand"> 👋🏻</span>
 						</Heading>
 						<Text>
 							Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder
