@@ -19,12 +19,11 @@ const Contact: NextPage = () => {
 				<div className="mb-10 space-y-4 md:space-y-10">
 					<div className="space-y-2 md:space-y-4">
 						<Heading headingType="h2" size="2xl" weight="medium">
-							Placeholder
+							Let's Connect 🚀
 						</Heading>
 						<Text>
-							Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder
-							Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder
-							Placeholder Placeholder Test
+							Whether you have a project in mind, need assistance with a tech challenge, or just
+							want to say hi, I'm here to help. Drop me a line, and I’ll get back to you soon. 😊
 						</Text>
 					</div>
 					<ContactForm />
