@@ -24,7 +24,7 @@ const Contact: NextPage = () => {
 						<Text>
 							Whether you have a project in mind, need assistance with a tech challenge, or just
 							want to say hi, I&lsquo;m here to help. Drop me a line, and I&lsquo;ll get back to you
-							soon. 😊
+							soon.
 						</Text>
 					</div>
 					<ContactForm />

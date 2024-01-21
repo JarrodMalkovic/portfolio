@@ -3,9 +3,8 @@
 <h3 align="center">
   <a href="https://www.jarrodmalkovic.com/">Visit the live app</a> |
   <a href="https://github.com/JarrodMalkovic/portfolio-website/issues">Report Bug</a> |
-  <a href="https://github.com/JarrodMalkovic/portfolio-website/issues">Request Feature</a> 
+  <a href="https://github.com/JarrodMalkovic/portfolio-website/issues">Request Feature</a>
 </h3>
-
 
 ![Home Page Screenshot](./screenshots/portfolio.png)
 
@@ -18,7 +17,6 @@
 ## 🚀 Run Locally
 
 ### Clone repo to your local machine
-
 
 ```bash
 git clone git@github.com:JarrodMalkovic/portfolio-website.git
@@ -43,6 +41,7 @@ Open `https://localhost:3000` in your browser.
 ## 💻 Technologies
 
 This project is is created with:
+
 - TypeScript, Next.js, React, TailwindCSS, GraphQL, Hygraph, Sentry and deployed to Vercel.
 
 ## ⚖️ License
@@ -54,5 +53,5 @@ This project is licensed under the MIT License
 <h3>
   <a href="https://www.jarrodmalkovic.com/">Visit the live app</a> |
   <a href="https://github.com/JarrodMalkovic/portfolio-website/issues">Report Bug</a> |
-  <a href="https://github.com/JarrodMalkovic/portfolio-website/issues">Request Feature</a> 
+  <a href="https://github.com/JarrodMalkovic/portfolio-website/issues">Request Feature</a>
 </h3>
