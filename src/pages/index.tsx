@@ -29,12 +29,12 @@ const HomePage: NextPage<HomePageProps> = ({ content }) => {
 				<div className="space-y-4 md:space-y-10">
 					<div className="space-y-2 md:space-y-4">
 						<Heading headingType="h2" size="3xl" weight="medium" className="flex">
-							Hey there <span className="ml-2 animate-waving-hand"> 👋🏻</span>
+							Hey there <span className="ml-2 animate-waving-hand">👋🏻</span>
 						</Heading>
 						<Text>
 							I&lsquo;m a dedicated software engineer based in Sydney who loves incorporating a bit
-							of emoji fun into my work. I thrive on crafting elegant solutions to complex problems,
-							always with an eye for efficient and scalable code.
+							fun into my work. I thrive on crafting elegant solutions to complex problems, always
+							with an eye for efficient and scalable code.
 						</Text>
 					</div>
 					<div className="space-y-2 md:space-y-4">

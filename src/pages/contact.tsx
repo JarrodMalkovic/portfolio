@@ -18,8 +18,8 @@ const Contact: NextPage = () => {
 			<Container>
 				<div className="mb-10 space-y-4 md:space-y-10">
 					<div className="space-y-2 md:space-y-4">
-						<Heading headingType="h2" size="2xl" weight="medium">
-							Let&lsquo;s Connect 🚀
+						<Heading headingType="h2" size="2xl" weight="medium" className="flex">
+							Let&lsquo;s Connect <span className="ml-2 animate-flying-rocket">🚀</span>
 						</Heading>
 						<Text>
 							Whether you have a project in mind, need assistance with a tech challenge, or just

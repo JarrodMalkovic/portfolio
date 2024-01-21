@@ -31,9 +31,24 @@ module.exports = {
 					'60%': { transform: 'rotate(0.0deg)' },
 					'100%': { transform: 'rotate(0.0deg)' },
 				},
+				'rocket-flight': {
+					'0%, 100%': {
+						transform: 'translateY(0) rotate(-45deg)',
+					},
+					'25%': {
+						transform: 'translateY(-10px) rotate(-50deg)',
+					},
+					'50%': {
+						transform: 'translateY(0) rotate(-45deg)',
+					},
+					'75%': {
+						transform: 'translateY(10px) rotate(-40deg)',
+					},
+				},
 			},
 			animation: {
 				'waving-hand': 'wave 2s linear infinite',
+				'flying-rocket': 'rocket-flight 1.5s ease-in-out infinite',
 			},
 		},
 	},

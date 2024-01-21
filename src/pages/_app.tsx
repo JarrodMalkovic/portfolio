@@ -16,12 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<ThemeProvider attribute="class">
-				<main
-					className={classNames(
-						'min-h-screen transition-all duration-200 bg-white dark:bg-slate-900',
-						poppins.className
-					)}
-				>
+				<main className={classNames('min-h-screen bg-white dark:bg-slate-900', poppins.className)}>
 					<Component {...pageProps} />
 				</main>
 			</ThemeProvider>
