@@ -32,11 +32,11 @@ const HomePage: NextPage<HomePageProps> = ({ content }) => {
 							Hey there <span className="ml-2 animate-waving-hand">👋🏻</span>
 						</Heading>
 						<Text>
-							I&lsquo;m a passionate full stack Software Engineer in Freelancer.com's AI division. I
-							specialize in blending innovative AI strategies with full stack development to deliver
-							solutions that are as fun as they are functional. Whether leading AI driven projects
-							or optimizing microservices architectures, I thrive on crafting elegant solutions to
-							complex problems, always with an eye for scalable code.
+							I&lsquo;m a passionate full stack Software Engineer in Freelancer.com&lsquo;s AI
+							division. I specialize in blending innovative AI strategies with full stack
+							development to deliver solutions that are as fun as they are functional. Whether
+							leading AI driven projects or optimizing microservices architectures, I thrive on
+							crafting elegant solutions to complex problems, always with an eye for scalable code.
 						</Text>
 					</div>
 					<div className="space-y-2 md:space-y-4">
