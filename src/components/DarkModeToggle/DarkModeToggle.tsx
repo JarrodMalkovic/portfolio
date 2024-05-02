@@ -8,10 +8,15 @@ const DarkModeToggle = () => {
 	const [isMounted, setIsMounted] = React.useState(false);
 
 	React.useEffect(() => setIsMounted(true), []);
+	React.useEffect(() => {
+		if (theme === 'system') {
+			setTheme('light');
+		}
+	}, [theme, setTheme]);
 
 	return (
 		<Tooltip
-			label={theme === 'dark' ? 'Disable Dark Mode' : 'Enable Dark Mode'}
+			label={isMounted ? (theme === 'dark' ? 'Disable Dark Mode' : 'Enable Dark Mode') : ''}
 			placement="bottom"
 			showArrow={false}
 		>
