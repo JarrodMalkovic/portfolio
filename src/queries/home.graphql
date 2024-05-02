@@ -4,6 +4,9 @@ query HomePageContent {
 		description
 		githubLink
 		websiteLink
+		thumbnail {
+			url
+		}
 
 		skills {
 			name
