@@ -4,19 +4,27 @@ import { ExternalLinkIcon, GithubIcon } from '@/components/Icons/Icon';
 import Text from '@/components/Text/Text';
 import Tooltip from '@/components/Tooltip';
 import { HomePageContentQuery } from 'graphql/generated';
+import Image from 'next/image';
 
 type PortfolioDisplayItemProps = {
 	portfolioItem: HomePageContentQuery['projects'][number];
 };
 
 const PortfolioDisplayItem: React.FC<PortfolioDisplayItemProps> = ({ portfolioItem }) => {
-	console.log(portfolioItem);
 	return (
 		<Card>
 			<div className="flex flex-col items-center text-center rounded-t">
-				<div className="rounded-t">
-					<img className="rounded-t h-48 min-w-full" src={portfolioItem.thumbnail.url} />
-				</div>
+				{portfolioItem?.thumbnail?.url && (
+					<Image
+						alt={`A screenshot of my ${portfolioItem.title} project`}
+						className="rounded-t h-48 min-w-full"
+						src={portfolioItem?.thumbnail?.url}
+						width="500"
+						quality="100"
+						height="600"
+					/>
+				)}
+
 				<div className="p-8 space-y-4">
 					<Heading headingType="h2" size="2xl" weight="medium">
 						{portfolioItem.title}
