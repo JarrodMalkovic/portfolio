@@ -17,12 +17,16 @@ query HomePageContent {
 		name
 	}
 
-	works(orderBy: order_ASC) {
-		description
-		title
-
+	companies(orderBy: order_ASC) {
+		name
 		logo {
 			url
+		}
+		roles(orderBy: startDate_DESC) {
+			title
+			startDate
+			endDate
+			description
 		}
 	}
 }

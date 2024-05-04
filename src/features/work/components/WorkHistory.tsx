@@ -3,14 +3,14 @@ import { HomePageContentQuery } from 'graphql/generated';
 import { WorkHistoryItem } from './WorkHistoryItem';
 
 type WorkHistoryProps = {
-	workHistoryItems: HomePageContentQuery['works'];
+	companies: HomePageContentQuery['companies'];
 };
 
-const WorkHistory: React.FC<WorkHistoryProps> = ({ workHistoryItems }) => {
+const WorkHistory: React.FC<WorkHistoryProps> = ({ companies }) => {
 	return (
-		<div className="space-y-2 md:space-y-4">
-			{workHistoryItems.map((workHistoryItem, idx) => (
-				<WorkHistoryItem key={idx} workHistoryItem={workHistoryItem}></WorkHistoryItem>
+		<div className="space-y-4">
+			{companies.map((company, idx) => (
+				<WorkHistoryItem key={idx} company={company}></WorkHistoryItem>
 			))}
 		</div>
 	);

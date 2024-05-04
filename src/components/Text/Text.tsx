@@ -21,7 +21,7 @@ const text = cva(['dark:text-white', 'text-black', 'leading-6', 'tracking-wide']
 			light: ['font-light'],
 		},
 		colour: {
-			light: ['text-gray-600', 'dark:text-slate-400'],
+			light: ['text-gray-700', 'dark:text-slate-400'],
 			normal: [],
 		},
 	},

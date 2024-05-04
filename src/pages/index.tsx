@@ -43,7 +43,7 @@ const HomePage: NextPage<HomePageProps> = ({ content }) => {
 						<Heading headingType="h2" size="2xl" weight="medium">
 							Work
 						</Heading>
-						<WorkHistory workHistoryItems={content.works} />
+						<WorkHistory companies={content.companies} />
 					</div>
 					<div className="space-y-2 md:space-y-4">
 						<Heading headingType="h2" size="2xl" weight="medium">
@@ -57,7 +57,7 @@ const HomePage: NextPage<HomePageProps> = ({ content }) => {
 					</div>
 					<div className="space-y-2 md:space-y-4">
 						<Heading headingType="h2" size="2xl" weight="medium">
-							Selected Projects
+							Projects
 						</Heading>
 						<Portfolio portfolioItems={content.projects} />
 					</div>
